@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "aea19ebd-612f-40a2-a6da-994eef4117f1",
+		"name": "AAPM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Produtos.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:54091/api/Produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"prod 3\",\n\t\"descricao\" : \"desc prod 3\",\n\t\"preco\" : \"0.00\",\n\t\"imagem\" : \"imagem3\" \n}"
+						},
+						"url": {
+							"raw": "http://localhost:54091/api/Produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto.Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"nome\": \"prod editado\",\n\t\"imagem\": \"imagem editada\",\n\t\"descricao\": \"desc editada\",\n\t\"ativo\": true,\n\t\"poucasUnidades\": true,\n\t\"preco\": 1.0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54091/api/Produto/editar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Produto",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto.AlterarStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:54091/api/Produto/AlterarStatus/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Produto",
+								"AlterarStatus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto.PoucasUnidades",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:54091/api/Produto/PoucasUnidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Produto",
+								"PoucasUnidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Usuario.Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"senha\": \"321\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54091/api/Usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Pedido.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:54091/api/Pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtoId\": 3,\r\n  \"nome\": \"aluno 2\",\r\n  \"email\": \"aluno@email.com\",\r\n  \"telefone\": \"99999-9999\",\r\n  \"turma\": \"2s2019-t3-redes\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:54091/api/Pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido.AlterarStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:54091/api/Pedido/AlterarStatus/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54091",
+							"path": [
+								"api",
+								"Pedido",
+								"AlterarStatus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
